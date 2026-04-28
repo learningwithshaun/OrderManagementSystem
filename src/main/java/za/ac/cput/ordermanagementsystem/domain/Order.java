@@ -7,8 +7,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name= "orders")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // This is important for inheritance apparently
-@DiscriminatorColumn(name = "order_type")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Order {
     @Id
     private String orderId;

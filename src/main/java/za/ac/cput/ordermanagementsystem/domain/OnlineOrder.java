@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@DiscriminatorValue("ONLINE")
+@Table(name = "online_order")
 public class OnlineOrder extends Order {
     private String deliveryAddress;
     private String shippingCode;

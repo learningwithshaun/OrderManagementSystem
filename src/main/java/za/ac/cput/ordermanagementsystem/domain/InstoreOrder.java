@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@DiscriminatorValue("INSTORE")
+@Table(name = "instore_orders")
 public class InstoreOrder extends Order{
     private double immediatePayment;
     private String cashierName;
