@@ -1,4 +1,4 @@
-# OrderManagementSystem  
+# Order Management System  
 
 In this exercise, I built my first **Spring Boot application** and gained hands-on experience working with API endpoints and testing them using Postman. The application follows Domain-Driven Design principles and includes database integration, which helped me understand how different layers of an application work together.
 
