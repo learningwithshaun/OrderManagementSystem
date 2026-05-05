@@ -5,7 +5,7 @@ import za.ac.cput.ordermanagementsystem.domain.Name;
 public class Helper {
 
     public static boolean isNullOrEmpty(String str){
-        return str == null || str.trim().isEmpty();
+        return str == null || str.isEmpty();
     }
 
     public static boolean isValidDateTime(java.time.LocalDateTime dateTime) {
@@ -30,5 +30,9 @@ public class Helper {
 
     public static boolean isEmptyValueObject(Name name){
         return name ==  null;
+    }
+
+    public static boolean isValidEmail(String email){
+        return email != null && email.matches("^[A-Za-z0-9_.-]+@[A-Za-z0-9.-]+$");
     }
 }

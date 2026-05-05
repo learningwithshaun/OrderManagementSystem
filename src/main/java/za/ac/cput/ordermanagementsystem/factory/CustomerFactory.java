@@ -7,15 +7,15 @@ import za.ac.cput.ordermanagementsystem.util.Helper;
 public class CustomerFactory {
     public static Customer createCustomer(String customerId, Name name, String email, String mobileNumber){
 
-        if(!Helper.isNullOrEmpty(customerId)){
+        if(Helper.isNullOrEmpty(customerId)){
             throw new IllegalArgumentException("Customer ID is required.");
         }
 
-        if(!Helper.isEmptyValueObject(name)){
+        if(Helper.isEmptyValueObject(name)){
             throw new IllegalArgumentException("Name is required.");
         }
 
-        if (!Helper.isNullOrEmpty(email)){ // need apache commons.validator
+        if (!Helper.isValidEmail(email)){ // need apache commons.validator (actually you don't need it)
             throw new IllegalArgumentException("Invalid email");
         }
 
