@@ -5,7 +5,7 @@ import za.ac.cput.ordermanagementsystem.util.Helper;
 
 import java.time.LocalDateTime;
 
-public class OnlineOrderFactory {
+public class OnlineOrderFactory {  //Find a way of using your factory class in your service class
     public static OnlineOrder createOrder(String orderId, LocalDateTime date, String status, String deliveryAddress, String shippingCode, double digitalPayment){
 
         if (!Helper.isNullOrEmpty(orderId)){
